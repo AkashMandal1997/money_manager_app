@@ -88,7 +88,7 @@ money_manager/
 ├── moneymanager_backend/      # Spring Boot Backend
 │   ├── src/
 │   │   ├── main/
-│   │   │   ├── java/in/bushansirgur/moneymanager/
+│   │   │   ├── java/in/akash/moneymanager/
 │   │   │   │   ├── config/           # Security & CORS configuration
 │   │   │   │   ├── controller/       # REST API endpoints
 │   │   │   │   ├── dto/              # Data Transfer Objects
