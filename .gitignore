@@ -1,16 +1,16 @@
 # Money Manager - Root .gitignore
 
 # Backend (Spring Boot)
-moneymanager/.env
-moneymanager/.env.*
-moneymanager/target/
-moneymanager/.mvn/
+moneymanager_backend/.env
+moneymanager_backend/.env.*
+moneymanager_backend/target/
+moneymanager_backend/.mvn/
 
 # Frontend (React + Vite)
-moneymanagerwebapp/node_modules/
-moneymanagerwebapp/dist/
-moneymanagerwebapp/.env
-moneymanagerwebapp/.env.*
+moneymanager_frontend/node_modules/
+moneymanager_frontend/dist/
+moneymanager_frontend/.env
+moneymanager_frontend/.env.*
 
 # OS Files
 .DS_Store
