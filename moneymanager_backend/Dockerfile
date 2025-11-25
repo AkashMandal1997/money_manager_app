@@ -1,18 +1,18 @@
 # Multi-stage build for Render deployment
-# Stage 1: Build the application
-FROM eclipse-temurin:21-jdk AS build
+# Stage 1: Build the application with Maven
+FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
 
 # Copy pom.xml first for dependency caching
 COPY pom.xml .
 
 # Download dependencies (cached layer)
-RUN mvn dependency:go-offline -B || true
+RUN mvn dependency:go-offline -B
 
 # Copy source code
 COPY src src
 
-# Build the application using Maven (Maven is included in JDK image)
+# Build the application
 RUN mvn clean package -DskipTests
 
 # Stage 2: Runtime
