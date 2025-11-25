@@ -85,7 +85,7 @@ A comprehensive full-stack personal finance management application that helps us
 
 ```
 money_manager/
-├── moneymanager/              # Spring Boot Backend
+├── moneymanager_backend/      # Spring Boot Backend
 │   ├── src/
 │   │   ├── main/
 │   │   │   ├── java/in/bushansirgur/moneymanager/
@@ -104,7 +104,7 @@ money_manager/
 │   ├── Dockerfile
 │   └── pom.xml
 │
-└── moneymanagerwebapp/        # React Frontend
+└── moneymanager_frontend/     # React Frontend
     ├── src/
     │   ├── components/        # Reusable UI components
     │   ├── context/           # React Context for state management
@@ -134,12 +134,12 @@ money_manager/
 1. **Clone the repository**
    ```bash
    git clone https://github.com/AkashMandal1997/money_manager_app.git
-   cd money_manager_app/moneymanager
+   cd money_manager_app/moneymanager_backend
    ```
 
 2. **Configure Database**
    
-   Create a `.env` file in the `moneymanager` directory:
+   Create a `.env` file in the `moneymanager_backend` directory:
    ```env
    # PostgreSQL Configuration (Production)
    POSTGRES_URL=jdbc:postgresql://localhost:5432/moneymanager
@@ -179,7 +179,7 @@ money_manager/
 
 1. **Navigate to frontend directory**
    ```bash
-   cd ../moneymanagerwebapp
+   cd ../moneymanager_frontend
    ```
 
 2. **Install dependencies**
@@ -299,7 +299,7 @@ The frontend uses hardcoded API endpoints in `src/util/apiEndpoints.js`. For pro
 
 1. **Build for production**
    ```bash
-   cd moneymanagerwebapp
+   cd moneymanager_frontend
    npm run build
    ```
 
