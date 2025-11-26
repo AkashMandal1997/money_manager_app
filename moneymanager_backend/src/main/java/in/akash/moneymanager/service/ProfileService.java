@@ -32,6 +32,11 @@ public class ProfileService {
     private String activationURL;
 
     public ProfileDTO registerProfile(ProfileDTO profileDTO) {
+        // Check if email already exists
+        if (profileRepository.findByEmail(profileDTO.getEmail()).isPresent()) {
+            throw new IllegalArgumentException("Email already registered. Please use a different email or login.");
+        }
+        
         ProfileEntity newProfile = toEntity(profileDTO);
         newProfile.setActivationToken(UUID.randomUUID().toString());
         newProfile = profileRepository.save(newProfile);
