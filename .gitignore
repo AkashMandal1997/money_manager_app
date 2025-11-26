@@ -35,3 +35,5 @@ yarn-error.log*
 *.swp
 *~
 
+test_email.py
+test_register.ps1
